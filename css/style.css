@@ -8,7 +8,47 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+#parent {
+  height: 40px;
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+  position: relative;
+}
+
+#border {
+  border-bottom: solid 3px rgba(0,255,0,.75);
+  position: absolute;
+  right: -7px;
+  width: 20px;
+}
+
+/* Animation */
+#parent {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both
+}
+
+#border {
+   animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 480px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: rgba(0,255,0,.75);}
+  to{border-bottom-color: transparent;}
+}
 body {
   background: #fff;
   color: #444;
@@ -135,14 +175,14 @@ h6 {
 }
 
 #topbar .social-links a {
-  color: #535074;
+  color: lightgrey;
   padding: 4px 12px;
   display: inline-block;
   line-height: 1px;
 }
 
 #topbar .social-links a:hover {
-  color: #1bb1dc;
+  color: #dbb612;
 }
 
 #topbar .social-links a:first-child {
@@ -277,7 +317,7 @@ h6 {
 .main-nav a {
   display: block;
   position: relative;
-  color: #413e66;
+  color: lightgrey;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
@@ -289,7 +329,7 @@ h6 {
 .main-nav a:hover,
 .main-nav .active > a,
 .main-nav li:hover > a {
-  color: #1bb1dc;
+  color: #dbb612;
   text-decoration: none;
 }
 
@@ -1094,7 +1134,7 @@ h6 {
 }
 
 #pricing .card .card-header {
-  background-color: white;
+  background-color: lightgrey;
   border-bottom: 0px;
   -moz-text-align-last: center;
   text-align-last: center;
@@ -1252,7 +1292,7 @@ h6 {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #1bb1dc;
+  background: #dbb612;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1344,7 +1384,7 @@ h6 {
 
 #footer .footer-top .form #sendmessage {
   color: #fff;
-  background: #1bb1dc;
+  background: #dbb612;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1353,7 +1393,7 @@ h6 {
 }
 
 #footer .footer-top .form #errormessage {
-  color: #fff;
+  color: #dbb612;
   display: none;
   background: red;
   text-align: center;
@@ -1377,7 +1417,7 @@ h6 {
 }
 
 #footer .footer-top .form label {
-  color: #413e66;
+  color: #dbb612;
   font-weight: 500;
 }
 
@@ -1410,7 +1450,7 @@ h6 {
 }
 
 #footer .footer-top .form button[type="submit"] {
-  background: #1bb1dc;
+  background: #dbb612;
   border: 0;
   border-radius: 3px;
   padding: 8px 30px;
